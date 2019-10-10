@@ -1,20 +1,13 @@
 USE codeup_test_db;
 
-SELECT 'These are all albums by Pink Floyd' AS 'Brance Facts';
-SELECT name FROM albums WHERE artist = "Pink Floyd";
+SELECT name AS 'Albums by Pink Floyd' FROM albums WHERE artist = "Pink Floyd";
 
-SELECT 'Here is the year that Sgt. Pepper''s Lonely Hearts Club Band was released' AS 'Brance Facts';
-SELECT release_date FROM albums WHERE name = "Sgt. Pepper''s Lonely Hearts Club Band";
+SELECT release_date AS 'The year that Sgt. Pepper''s Lonely Hearts Club Band was released' FROM albums WHERE name = "Sgt. Pepper''s Lonely Hearts Club Band";
 
-SELECT 'Here''s the genre for Nevermind' AS 'Brance Facts';
-SELECT genre FROM albums WHERE name = "Nevermind";
+SELECT genre AS 'The genre of Nevermind' FROM albums WHERE name = "Nevermind";
 
-SELECT 'This is a list of all albums released in the 1990s' AS 'Brance Facts';
-SELECT name FROM albums WHERE release_date >= 1990;
+SELECT Name, Artist, release_date AS 'Release Year' FROM albums WHERE release_date BETWEEN 1990 AND 1999;
 
-SELECT 'These albums had less than 20 million certified sales' AS 'Brance Facts';
-SELECT name FROM albums WHERE sales <= 20;
+SELECT name AS 'Albums with less than 20 million certified sales' FROM albums WHERE sales <= 20;
 
-SELECT 'Have yourself a list of Rock albums. Specifically Rock. No special kinds of Rock here.' AS 'Brance Facts';
-SELECT name FROM albums WHERE genre = "Rock";
-
+SELECT name AS 'Rock Albums' FROM albums WHERE genre = 'Rock';
